@@ -18,7 +18,14 @@ var multipleSupport = typeof $('<input/>')[0].multiple !== 'undefined',
 		          // Hack for IE
 		          $label = $('<label class="file-upload-button" for="'+ $file[0].id +'">Select a File</label>');
 
-							
+							// Hide by shifting to the left so we
+		 // can still trigger events
+		 $file.css({
+			 position: 'absolute',
+			 left: '-9999px'
+		 });
+
+		 
 
 var navigate = (function() {
 	$('.dd').toggle();
