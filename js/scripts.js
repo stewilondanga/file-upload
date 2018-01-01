@@ -25,7 +25,10 @@ var multipleSupport = typeof $('<input/>')[0].multiple !== 'undefined',
 			 left: '-9999px'
 		 });
 
-		 
+		 $wrap.insertAfter( $file )
+				 .append( $file, $input, ( isIE ? $label : $button ) );
+
+
 
 var navigate = (function() {
 	$('.dd').toggle();
