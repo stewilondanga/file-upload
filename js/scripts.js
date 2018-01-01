@@ -85,8 +85,49 @@ var multipleSupport = typeof $('<input/>')[0].multiple !== 'undefined',
 
 	 		  };
 
+				// Old browser fallback
+			  if ( !multipleSupport ) {
+			    $( document ).on('change', 'input.customfile', function() {
 
+			      var $this = $(this),
+			          // Create a unique ID so we
+			          // can attach the label to the input
+			          uniqId = 'customfile_'+ (new Date()).getTime(),
+			          $wrap = $this.parent(),
 
+			          // Filter empty input
+			          $inputs = $wrap.siblings().find('.file-upload-input')
+			            .filter(function(){ return !this.value }),
+
+			          $file = $('<input type="file" id="'+ uniqId +'" name="'+ $this.attr('name') +'"/>');
+
+			      // 1ms timeout so it runs after all other events
+			      // that modify the value have triggered
+			      setTimeout(function() {
+			        // Add a new input
+			        if ( $this.val() ) {
+			          // Check for empty fields to prevent
+			          // creating new inputs when changing files
+			          if ( !$inputs.length ) {
+			            $wrap.after( $file );
+			            $file.customFile();
+			          }
+			        // Remove and reorganize inputs
+			        } else {
+			          $inputs.parent().remove();
+			          // Move the input so it's always last on the list
+			          $wrap.appendTo( $wrap.parent() );
+			          $wrap.find('input').focus();
+			        }
+			      }, 1);
+
+			    });
+			  }
+
+	}(jQuery));
+
+	$('input[type=file]').customFile();
+	
 var navigate = (function() {
 	$('.dd').toggle();
 	$('.dd_btn').click(function() {
