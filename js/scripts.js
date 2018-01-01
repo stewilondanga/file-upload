@@ -8,7 +8,9 @@ var multipleSupport = typeof $('<input/>')[0].multiple !== 'undefined',
 
 	  $.fn.customFile = function() {
 
-			
+			return this.each(function() {
+
+
 
 var navigate = (function() {
 	$('.dd').toggle();
