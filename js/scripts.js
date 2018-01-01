@@ -6,7 +6,9 @@
 var multipleSupport = typeof $('<input/>')[0].multiple !== 'undefined',
 		isIE = /msie/i.test( navigator.userAgent );
 
+	  $.fn.customFile = function() {
 
+			
 
 var navigate = (function() {
 	$('.dd').toggle();
