@@ -1,41 +1,41 @@
 body {
   text-align: center;
   font-family: courier;
-  background-image:url("../assets/image.jpeg");
+  background-image: url("../assets/image.jpeg");
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
 @import "compass/css3";
-
 @import url("https://fonts.googleapis.com/css?family=Lato");
-
 $background: #e74c3c;
 $file-upload-color: #c0392b;
 $file-upload-size: 300px;
-
 * {
-    margin: 0;
-    padding: 0;
-    @include box-sizing(border-box);
+  margin: 0;
+  padding: 0;
+  @include box-sizing(border-box);
 }
+
 body {
-    font-family: Lato, Arial;
-    color: #fff;
-    padding: 55px 25px;
-    background-color: $background;
+  font-family: Lato, Arial;
+  color: #fff;
+  padding: 55px 25px;
+  background-color: $background;
 }
+
 h1 {
-    font-weight: normal;
-    font-size: 40px;
-    font-weight: normal;
-    text-transform: uppercase;
-    span {
-        font-size: 13px;
-        display: block;
-        padding-left: 4px;
-    }
+  font-weight: normal;
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  span {
+    font-size: 13px;
+    display: block;
+    padding-left: 4px;
+  }
 }
+
 p {
   margin-top: 200px;
   a {
@@ -52,154 +52,187 @@ p {
     }
   }
 }
+
 .custom-file-upload-hidden {
-    display: none;
-    visibility: hidden;
-    position: absolute;
-    left: -9999px;
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
 }
+
 .custom-file-upload {
+  display: block;
+  width: auto;
+  font-size: 16px;
+  margin-top: 30px; //border: 1px solid #ccc;
+  label {
     display: block;
-    width: auto;
-    font-size: 16px;
-    margin-top: 30px;
-    //border: 1px solid #ccc;
-    label {
-        display: block;
-        margin-bottom: 5px;
-    }
+    margin-bottom: 5px;
+  }
 }
 
 .file-upload-wrapper {
-    position: relative;
-    margin-bottom: 5px;
-    //border: 1px solid #ccc;
+  position: relative;
+  margin-bottom: 5px; //border: 1px solid #ccc;
 }
+
 .file-upload-input {
-    width: $file-upload-size;
-    color: #fff;
-    font-size: 16px;
-    padding: 11px 17px;
-    border: none;
-    background-color: $file-upload-color;
-    @include transition(all 0.2s ease-in);
-    float: left; /* IE 9 Fix */
-    &:hover, &:focus {
-        background-color: darken($file-upload-color, 5);
-        outline: none;
-    }
+  width: $file-upload-size;
+  color: #fff;
+  font-size: 16px;
+  padding: 11px 17px;
+  border: none;
+  background-color: $file-upload-color;
+  @include transition(all 0.2s ease-in);
+  float: left;
+  /* IE 9 Fix */
+  &:hover, &:focus {
+    background-color: darken($file-upload-color, 5);
+    outline: none;
+  }
 }
+
 .file-upload-button {
-    cursor: pointer;
-    display: inline-block;
-    color: #fff;
-    font-size: 16px;
-    text-transform: uppercase;
-    padding: 11px 20px;
-    border: none;
-    margin-left: -1px;
-    background-color: darken($file-upload-color, 10);
-    float: left; /* IE 9 Fix */
-    @include transition(all 0.2s ease-in);
-    &:hover {
-        background-color: darken($file-upload-color, 20);
-    }
+  cursor: pointer;
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 11px 20px;
+  border: none;
+  margin-left: -1px;
+  background-color: darken($file-upload-color, 10);
+  float: left;
+  /* IE 9 Fix */
+  @include transition(all 0.2s ease-in);
+  &:hover {
+    background-color: darken($file-upload-color, 20);
+  }
 }
 
+h1 {
+  font-family: helvetica;
+  font-weight: normal;
+  text-align: center;
+  color: #c0c0c0;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  width: 375px;
+  margin: 0 auto;
+  border-bottom: 3px solid #f3f3f3;
+}
 
+.containers {
+  width: 520px;
+  margin: 20px auto;
+}
 
-    h1 {
-    	font-family: helvetica;
-    	font-weight: normal;
-    	text-align: center;
-    	color: #c0c0c0;
-    	padding-top: 50px;
-    	padding-bottom: 10px;
-    	width: 375px;
-    	margin: 0 auto;
-    	border-bottom: 3px solid #f3f3f3;
+.menu_btn {
+  font-family: helvetica;
+  width: 125px;
+  float: left;
+  margin-left: 5px;
+  &:first-child .dd_btn {
+    background: #f1c40f;
+    &:active {
+      background: #f39c12;
     }
-
-    .containers {
-    	width: 520px;
-    	margin: 20px auto;
+  }
+  &:nth-child(2) .dd_btn {
+    background: #2ecc71;
+    &:active {
+      background: #27ae60;
     }
-
-    .menu_btn {
-    	font-family: helvetica;
-    	width: 125px;
-    	float: left;
-    	margin-left: 5px;
-    	&:first-child .dd_btn {
-    		background: #f1c40f;
-    		&:active {
-    			background: #f39c12;
-    		}
-    	}
-    	&:nth-child(2) .dd_btn {
-    		background: #2ecc71;
-    		&:active {
-    			background: #27ae60;
-    		}
-    	}
-    	&:nth-child(3) .dd_btn {
-    		background: #3498db;
-    		&:active {
-    			background: #2980b9;
-    		}
-    	}
-    	&:nth-child(4) .dd_btn {
-    		background: #e74c3c;
-    		&:active {
-    			background: #c0392b;
-    		}
-    	}
-    	.dd_btn {
-    		height: 50px;
-    		width: 125px;
-    		color: #fff;
-    		font-size: 18px;
-    		border: 0px;
-    		z-index: 3;
-    		float: left;
-    		cursor: pointer;
-      	background-color:#E19E19;
-    		&:active {
-      		background-color:#946810;
-    		}
-    		&:focus {
-    			outline: none;
-    		}
-    	}
-    	.dd {
-    		position: absolute;
-    		width: 255px;
-    		margin-top: 55px;
-    		background: white;
-    		text-align: center;
-    		a {
-    			width: 100%;
-    			display: block;
-    			height: 100%;
-    			padding: 15px 0 15px 0;
-    			text-decoration: none;
-    			color: #666;
-    			background: #f9f9f9;
-    			&:hover {
-    				background: #ecf0f1;
-    			}
-    			&:active {
-    				background-color: #bdc3c7;
-    				color: #fff;
-    			}
-    		}
-    	}
+  }
+  &:nth-child(3) .dd_btn {
+    background: #3498db;
+    &:active {
+      background: #2980b9;
     }
+  }
+  &:nth-child(4) .dd_btn {
+    background: #e74c3c;
+    &:active {
+      background: #c0392b;
+    }
+  }
+  .dd_btn {
+    height: 50px;
+    width: 125px;
+    color: #fff;
+    font-size: 18px;
+    border: 0px;
+    z-index: 3;
+    float: left;
+    cursor: pointer;
+    background-color: #E19E19;
+    &:active {
+      background-color: #946810;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .dd {
+    position: absolute;
+    width: 255px;
+    margin-top: 55px;
+    background: white;
+    text-align: center;
+    a {
+      width: 100%;
+      display: block;
+      height: 100%;
+      padding: 15px 0 15px 0;
+      text-decoration: none;
+      color: #666;
+      background: #f9f9f9;
+      &:hover {
+        background: #ecf0f1;
+      }
+      &:active {
+        background-color: #bdc3c7;
+        color: #fff;
+      }
+    }
+  }
+}
 
-.cal{ display:inline-block; background:#ffe; color:#555; font-size:6px; text-align:center; transform:scale(1); transition:all 0.2s linear;}
-.cal:hover{ transform:scale(2.5);transition:all 0.4s linear;}
-.cal caption{ background:#d44; color:#eee; font-size:15px;}
-.cal th{ color:#aaa;line-height:200%;}
-.cal th:first-child{ color:#f00;}
-.cal th:last-child{ color:#04d;}
-.cal td{ padding:0 2px; line-height:100%;}
+.cal {
+  display: inline-block;
+  background: #ffe;
+  color: #555;
+  font-size: 6px;
+  text-align: center;
+  transform: scale(1);
+  transition: all 0.2s linear;
+}
+
+.cal:hover {
+  transform: scale(2.5);
+  transition: all 0.4s linear;
+}
+
+.cal caption {
+  background: #d44;
+  color: #eee;
+  font-size: 15px;
+}
+
+.cal th {
+  color: #aaa;
+  line-height: 200%;
+}
+
+.cal th:first-child {
+  color: #f00;
+}
+
+.cal th:last-child {
+  color: #04d;
+}
+
+.cal td {
+  padding: 0 2px;
+  line-height: 100%;
+}
