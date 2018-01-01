@@ -10,6 +10,10 @@ body {
 
 @import url("https://fonts.googleapis.com/css?family=Lato");
 
+$background: #e74c3c;
+$file-upload-color: #c0392b;
+$file-upload-size: 300px;
+
 
 
     h1 {
