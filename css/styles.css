@@ -1,7 +1,7 @@
 body {
   text-align: center;
   font-family: courier;
-  background-image: url("../assets/image.jpeg");
+  background-color: #520723;
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -21,16 +21,15 @@ body {
   font-family: Lato, Arial;
   color: #fff;
   padding: 55px 25px;
-  background-color: $background;
 }
 
 h1 {
   font-weight: normal;
-  font-size: 40px;
+  font-size: 15px;
   font-weight: normal;
   text-transform: uppercase;
   span {
-    font-size: 13px;
+    font-size: 10px;
     display: block;
     padding-left: 4px;
   }
@@ -114,7 +113,7 @@ h1 {
   font-family: helvetica;
   font-weight: normal;
   text-align: center;
-  color: #c0c0c0;
+  color: #286B83;
   padding-top: 50px;
   padding-bottom: 10px;
   width: 375px;
@@ -133,27 +132,27 @@ h1 {
   float: left;
   margin-left: 5px;
   &:first-child .dd_btn {
-    background: #f1c40f;
+    background-color: #f1c40f;
     &:active {
-      background: #f39c12;
+      background-color: #f39c12;
     }
   }
   &:nth-child(2) .dd_btn {
     background: #2ecc71;
     &:active {
-      background: #27ae60;
+      background-color: #27ae60;
     }
   }
   &:nth-child(3) .dd_btn {
     background: #3498db;
     &:active {
-      background: #2980b9;
+      background-color: #2980b9;
     }
   }
   &:nth-child(4) .dd_btn {
     background: #e74c3c;
     &:active {
-      background: #c0392b;
+      background-color: #c0392b;
     }
   }
   .dd_btn {
@@ -188,7 +187,7 @@ h1 {
       color: #666;
       background: #f9f9f9;
       &:hover {
-        background: #ecf0f1;
+        background-color: #ecf0f1;
       }
       &:active {
         background-color: #bdc3c7;
